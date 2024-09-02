@@ -30,9 +30,9 @@ async function main() {
 
 	// try to make various dist/ directories, if needed
 	for (let dir of [
-			DIST_DIR,
-			DIST_EXTERNAL_DIR,
-		]) {
+		DIST_DIR,
+		DIST_EXTERNAL_DIR,
+	]) {
 		if (!(await safeMkdir(dir))) {
 			throw new Error(`Target directory (${dir}) does not exist and could not be created.`);
 		}
